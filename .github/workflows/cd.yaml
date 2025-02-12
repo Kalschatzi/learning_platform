@@ -6,17 +6,17 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      - name: Fetch key
+        run: |
+          echo "${{ secrets.VPN_FILE }}" >> client.ovpn
       - name: Install OpenVPN
         run: |
           sudo apt update
           sudo apt install -y openvpn openvpn-systemd-resolved
-      - name: Fetch key
-        run: |
-          echo ${{ secrets.VPN_FILE }} > .github/workflows/client.ovpn
       - name: Connect to VPN
         uses: "kota65535/github-openvpn-connect-action@v2"
         with:
-          config_file: .github/workflows/client.ovpn
+          config_file: client.ovpn
           username: ${{ secrets.VPN_USER }}
           password: ${{ secrets.VPN_PASS }}
       # - name: Set up SSH key
