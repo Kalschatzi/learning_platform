@@ -25,3 +25,7 @@ jobs:
       - name: Run Docker container
         run: |
           make docker-run
+
+      - name: Curl container
+        run: |
+          curl -i http://localhost:8888

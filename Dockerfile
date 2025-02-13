@@ -1,4 +1,4 @@
-FROM klakegg/hugo:0.111.3 AS builder
+FROM hugomods/hugo:0.143.1 AS builder
 
 WORKDIR /src
 COPY . /src
