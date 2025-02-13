@@ -11,7 +11,7 @@ init:
 
 .PHONY: docker-build
 docker-build:  # Build the Docker image
-	@docker build . -t learns:latest  --build-arg HUGO_BASEURL="https://learn.kalschatzi.com"
+	@docker build . -t learn:latest  --build-arg HUGO_BASEURL="https://learn.kalschatzi.com"
 
 .PHONY: docker-run
 docker-run:  # Run Docker compose
