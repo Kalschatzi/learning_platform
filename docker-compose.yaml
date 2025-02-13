@@ -1,0 +1,9 @@
+name: learn
+
+services:
+  learn:
+    container_name: learn
+    image: learn:latest
+    ports:
+      - 1313:80    
+    restart: always
