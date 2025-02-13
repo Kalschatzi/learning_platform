@@ -1,9 +1,9 @@
-name: learn
+version: '3.8'
 
 services:
   learn:
     container_name: learn
-    image: learn:latest
+    build: .
     ports:
       - 8888:80    
     restart: always
