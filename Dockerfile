@@ -4,7 +4,7 @@ WORKDIR /src
 COPY . /src
 RUN hugo --minify
 
-FROM nginx:1.26.2-alpine
+FROM nginx:1.26.2
 COPY --from=builder /src/public /usr/share/nginx/html
 
 CMD ["nginx", "-g", "daemon off;"]
