@@ -1,27 +1,22 @@
 .PHONY: default
 default: help
 
-
 .PHONY: help
 help: Makefile
-	@echo "Usage: "
-	@sed -n 's/^##[ -]/   /p' Makefile
-	@echo ""
+	@awk -F ':.*#' '/^[a-zA-Z0-9_-]+:/ { printf "\033[36m%-20s\033[0m %s\n", $$1, $$2 }' Makefile
 
 .PHONY: init
 init:
-	git submodule update --init --recursive
+	@git submodule update --init --recursive
 
 .PHONY: docker-build
-docker-build:
-	docker build . -t learn:latest  --build-arg HUGO_BASEURL=https://learn.kalschatzi.com
+docker-build:  # Build the Docker image
+	@docker build . -t learn:latest  --build-arg HUGO_BASEURL="https://learn.kalschatzi.com"
 
 .PHONY: docker-run
-docker-run:
-	docker compose up -d 
+docker-run:  Run Docker compose
+	@docker compose up -d 
 
 .PHONY: run
-run: init
-	hugo serve
-
-
+run:
+	@hugo serve
