@@ -5,5 +5,5 @@ COPY . /src
 
 RUN hugo --minify --themesDir themes
 
-EXPOSE 1313
+EXPOSE 8888
 CMD ["hugo", "server", "--bind", "0.0.0.0", "--port", "8888", "--baseURL", "http://localhost:8888", "--appendPort=false"]
