@@ -13,6 +13,7 @@ We'll be using Java, as it's widely use, a run-everywhere language thanks to the
 By learning the key concepts for it you'll be well on your way to understanding how most languages work.
 
 ### What we'll cover:
-* Java Introduction
-* Encapsulation
-* Polymorphism
+* [Java Introduction](1-java-intro.md)
+* [Encapsulation](2-java-encapsulation.md)
+* [Inheritance](3-java-inheritance.md)
+* [Polymorphism](4-java-polymorphism.md)

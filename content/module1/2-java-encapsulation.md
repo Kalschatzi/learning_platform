@@ -40,7 +40,7 @@ public class Animal {
 
     // Setter method to modify private variable
     public void setName(String name) {
-        this.model = name;
+        this.name = name;
     }
 }
 ```
@@ -53,7 +53,7 @@ System.out.println(animalKali.getName());
 animalKali.setName("Schatzi");
 ```
 
-## What's with this.model = name;
+## What's with this.name = name;
 
 If we look at the constructor, we see that we actually have 2 variables called `name`. One we receive as arguement and is what it's called a `local` variable.
 

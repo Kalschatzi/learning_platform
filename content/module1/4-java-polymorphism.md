@@ -4,34 +4,6 @@ type = ""
 weight = 4
 +++
 
-## Inheritance
-
-Inheritance is an OOP concept that allows one class (child/subclass) to inherit properties and behaviors from another class (parent/superclass). It promotes code reuse and hierarchy-based organization.
-
-```java
-class Animal {
-    void eat() {
-        System.out.println("This animal eats food.");
-    }
-}
-
-// Child Class
-class Dog extends Animal {
-    void bark() {
-        System.out.println("Dog barks.");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Dog myDog = new Dog();
-        myDog.eat();  // Inherited method
-        myDog.bark(); // Own method
-    }
-}
-```
-
-## Polymorphism
 Polymorphism means "many forms" and allows a single interface (method, class, or function) to behave differently based on the context.
 
 ## Method overriding
@@ -64,14 +36,17 @@ class Animal {
     void makeSound() {
         System.out.println("Animal makes a sound");
     }
-}
 
-class Dog extends Animal {
-    @Override
-    void makeSound() {
-        System.out.println("Dog barks");
+     void makeSound(int volume) {
+        if (volume > 3) {
+            System.out.println("Animal makes a LOUD sound");
+
+        } else {
+            System.out.println("Animal makes a sound");
+        }
     }
 }
+´
 ```
 
 ## Polymorphism with interfaces
