@@ -13,9 +13,9 @@ services:
       retries: 3
       start_period: 5s
 
-  wait-for-web:
+  wait-for-learn:
     image: busybox
     depends_on:
-      web:
+      learn:
         condition: service_healthy
-    command: ["echo", "Web server is ready!"]
+    command: ["echo", "Learn server is ready!"]
