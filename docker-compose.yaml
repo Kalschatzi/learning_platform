@@ -7,3 +7,15 @@ services:
     ports:
       - 8888:8888    
     restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888/"]
+      interval: 5s
+      retries: 3
+      start_period: 5s
+
+  wait-for-web:
+    image: busybox
+    depends_on:
+      web:
+        condition: service_healthy
+    command: ["echo", "Web server is ready!"]
