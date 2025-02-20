@@ -1,6 +1,6 @@
 +++
 title = ""
-type = "Welcome to Kalschatzi's Learning Accelerator"
+type = "Welcome"
 +++
 
-Welcome!
+Welcome to Kalschatzi's Learning Accelerator!

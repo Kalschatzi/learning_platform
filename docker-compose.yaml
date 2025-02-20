@@ -7,3 +7,15 @@ services:
     ports:
       - 8888:8888    
     restart: always
+    healthcheck:
+      test: ["CMD", "wget", "-qO", "-", "http://localhost:8888/"]
+      interval: 5s
+      retries: 3
+      start_period: 5s
+
+  wait-for-learn:
+    image: busybox
+    depends_on:
+      learn:
+        condition: service_healthy
+    command: ["echo", "Learn server is ready!"]
