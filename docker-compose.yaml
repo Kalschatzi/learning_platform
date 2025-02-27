@@ -19,3 +19,4 @@ services:
       learn:
         condition: service_healthy
     command: ["echo", "Learn server is ready!"]
+  
