@@ -34,7 +34,7 @@ Both animals have the same exact name and nothing else.
 Using `schatzi == schatzi2`, what's the result?
 
 This will be `false`. This is not how you compare objects in java. Because this are pointers to memory, using `==` means you're comparing the memory pointer, not the actual value. 
-* This is also valid for native Java objects, like String *
+*This is also valid for native Java objects, like String*
 
 If you do
 ```java

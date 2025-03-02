@@ -4,14 +4,16 @@ pipeline {
         pollSCM('*/5 * * * 1-5')
     }
     stages {
+      stage('Install Java') {
         steps {
-        script {
-            sh '''
-                make init
-                make docker-run
-            '''
-          }
-       }
+          script {
+              sh '''
+                  make init
+                  make docker-run
+              '''
+            }
+        }
+      }
     }
     post {
     // Clean after build

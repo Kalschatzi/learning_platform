@@ -197,3 +197,6 @@ TDD Process (Red-Green-Refactor)
 This cycle ensures that every feature is tested before implementation, reducing bugs and improving design.
 
 When you ask people what TDD is, most just say it's "writing the tests before the code" but that's not a real reason. The main reason is to let test define the interface of the class, so you don't write bad functions that don't make sense just because they might be easy to implement.
+
+
+
