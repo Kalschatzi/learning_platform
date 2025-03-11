@@ -1,5 +1,5 @@
 baseURL = 'https://learn.kalschatzi.com/'
 languageCode = 'en-us'
-title = 'Learning Accelerator by Kalschatzi'
+title = 'Learning'
 
 theme = 'hugo-theme-relearn'
