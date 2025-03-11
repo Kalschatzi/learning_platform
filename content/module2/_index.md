@@ -13,4 +13,3 @@ We'll understand how to evaluate the complexities of an algorithms We'll look in
 * [Complexity of Algorithms](1-evaluate-algoritm.md)
 * [Data-structure](2-data-structures.md)
 * [HashMap deep dive](3-hash-map-deep-dive.md)
-

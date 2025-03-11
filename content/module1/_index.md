@@ -2,8 +2,6 @@
 title = "Module 1"
 type = "chapter"
 weight = 1
-menu.sidebar.parent = "Documentation"
-menu.sidebar.weight = 10
 +++
 
 ## Module Objectives
@@ -20,4 +18,4 @@ By learning the key concepts for it you'll be well on your way to understanding 
 * [Inheritance](3-java-inheritance.md)
 * [Polymorphism](4-java-polymorphism.md)
 * [Unit Testing](5-java-unit-testing.md)
-* [Comparing Object](6-%20java-comparing-objects.md)
+* [Comparing Object](6-java-comparing-objects.md)
