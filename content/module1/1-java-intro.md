@@ -87,4 +87,4 @@ java Main Tiago
 
 This will print `Hello Tiago` as that's what I passed on the args.
 
-And with this we have a working java application 🎉
+And with this we have a working Java application 🎉
