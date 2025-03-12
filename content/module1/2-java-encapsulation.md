@@ -15,7 +15,7 @@ Key Points:
 
 ## What does it actually look like?
 
-Mean you need to understand a few java keywords:
+This means that you need to understand a few Java keywords:
 - `public` - the whole code can see it
 - `private` - only the code in the same class can see it
 - `package` - the default and least explicitly used - only classes in the same package can see it
@@ -55,9 +55,9 @@ animalKali.setName("Schatzi");
 
 ## What's with this.name = name;
 
-If we look at the constructor, we see that we actually have 2 variables called `name`. One we receive as arguement and is what it's called a `local` variable.
+If we look at the constructor, we see that we actually have two variables called `name`. One we receive as an argument and it's called a `local` variable.
 
-The other is defined in the class and is called a `global` variable. If you have 2 variables like this with the same name, just be referencing it, you'll be accessing the `local` variable, so if you do `System.out.println(name)`, that `name` is what's received as argument. 
+The other is defined in the class and is called a `global` variable. If you have two variables like this with the same name, just by referencing it, you'll be accessing the `local` variable. So if you do `System.out.println(name)`, that `name` is what's received as argument. 
 
 ### How do you use the global one?
 This is where the `this` keyword comes into play. So by having 
@@ -70,7 +70,7 @@ What you're doing is storing the value of the `local` variable in the `global` v
 
 ## Constants
 
-What if I don't want the name to ever change? We'll we can make that a constant value. Constant values can be defined like
+What if I don't want the name to ever change? We can make it a constant value. Constant values can be defined like
 
 ```java
 public final String ENVIRONMENT_NAME="production"
@@ -88,4 +88,4 @@ public class Animal {
 }
 ```
 
-This means that I cannot use a `setter` function as after it's initialized, the value `name` can never be affected, only read.
+This means that I cannot use a `setter` function because after it's initialized, the `name` value can't be changed, only read.

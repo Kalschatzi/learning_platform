@@ -1,11 +1,10 @@
 +++
-title = "HashMap deep dive"
+title = "HashMap Deep Dive"
 type = ""
 weight = 3
 +++
  
- A HashMap is an implementation of the Map interface in Java that stores key-value pairs. It provides efficient O(1) average-time complexity for operations like insert
- , delete, and search. However, its performance can degrade under certain circumstances, leading to the worst-case time complexity of O(n).
+ A HashMap is an implementation of the Map interface in Java that stores key-value pairs. It provides efficient O(1) average-time complexity for operations like insert, delete, and search. However, its performance can degrade under certain circumstances, leading to the worst-case time complexity of O(n).
 
 
  ## How HashMap works
@@ -16,7 +15,7 @@ weight = 3
 
 ### Buckets
 
-Internally, a HashMap uses an array of buckets (or slots). Each bucket can store multiple key-value pairs if there are collisions (i.e., two keys having the same hash code). When inserting or searching for a key, the hash function maps the key to a specific bucket.
+Internally, a HashMap uses an array of buckets (or slots). Each bucket can store multiple key-value pairs in case of collisions (i.e., two keys having the same hash code). When inserting or searching for a key, the hash function maps the key to a specific bucket.
 
 ### Collisions
 
@@ -33,4 +32,4 @@ The worst-case time complexity for a search in a HashMap is O(n), which occurs w
 
 {{< figure src="/images/module2/hashmap.png" >}}
 
-This is a classic image of a HashMap and you'll see this in some technical interviews, where you'll be shown a similar image and asked to explain and it all means.
+This is a classic image of a HashMap and you'll see this in some technical interviews, where you'll be shown a similar image and asked to explain what it means.

@@ -25,7 +25,7 @@ class Dog extends Animal {
 }
 ```
 
-This way we can create a `Dog` definition that *extends* `Animal` and can `Override` the base method`.
+This way we can define a `Dog` class that `extends` `Animal` and can `Override` the base method.
 
 ## Method overloading
 
@@ -78,8 +78,8 @@ public class Main {
 }
 ```
 
-Special attention here to 
+Pay attention to:
 ```java
 Vehicle myVehicle = new Car();
 ```
-In this example `myVehicle` is defined as the interface, being agnostic of the implementation. This is a very good practice to keep in the future. You can look into the [SOLID principle](https://www.geeksforgeeks.org/solid-principle-in-programming-understand-with-real-life-examples/)
+In this example `myVehicle` is defined as the interface, being agnostic of the implementation. This is a good practice to keep in mind for the future. You can look into the [SOLID principle](https://www.geeksforgeeks.org/solid-principle-in-programming-understand-with-real-life-examples/)

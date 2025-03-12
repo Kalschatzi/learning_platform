@@ -33,8 +33,8 @@ public void testAnimalEquals() {
 Both animals have the same exact name and nothing else.
 Using `schatzi == schatzi2`, what's the result?
 
-This will be `false`. This is not how you compare objects in java. Because this are pointers to memory, using `==` means you're comparing the memory pointer, not the actual value. 
-*This is also valid for native Java objects, like String*
+This will return `false`. This is not how you compare objects in java. Because these are memory pointers, using `==` compares the memory pointer, not the actual value. 
+*This is also valid for native Java objects like String*
 
 If you do
 ```java
@@ -44,13 +44,13 @@ public void testAnimalEquals() {
     assertTrue(schatzi == schatzi2);
 }
 ```
-This will be valid, as both variables point to the same memory address.
+This will return `true`, as both variables point to the same memory address.
 
-So how do we compare object values?
+So, how to compare object values correctly?
 
 1. Using `equals()` Method
 
-By default, equals() (from Object class) checks for reference equality. To compare object content, override it.
+By default, `equals()` (from Object class) checks for reference equality. To compare object content, we need to override it.
 
 ```java
 class Animal {
@@ -88,7 +88,7 @@ This will succeed!
 
 1. Using `hashCode()` (Recommended with `equals()`)
 
-If overriding equals(), also override hashCode() for proper behavior in collections like HashMap.
+If you override `equals()`, you should also override `hashCode()` for correct behavior in collections like `HashMap`.
 
 ```java
 @Override
@@ -117,8 +117,8 @@ class Animal implements Comparable<Animal> {
     }
 }
 ```
-This `compareTo` method is called to understand how to sort objects with the different algorithms.
-This will return -1 if the smaller, 0 if equal or 1 if larger than the object it's being compared to    
+The `compareTo` method is called to understand how to sort objects with the different algorithms.
+This returns -1 if the object is smaller, 0 if they are equal or 1 if it's larger than the object it's being compared to.  
 Usage:
 ```java
 Animal kali = new Animal("Kali", 8);
