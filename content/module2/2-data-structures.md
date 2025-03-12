@@ -1,5 +1,5 @@
 +++
-title = "Data-structures"
+title = "Data Structures"
 type = ""
 weight = 2
 +++
@@ -19,7 +19,7 @@ ArrayList<Integer> arrayList = new ArrayList<>();  // Empty ArrayList of integer
 ```
 
 ## LinkedList
-A linear collection where each element (node) contains a reference to the next (and possibly the previous) element.
+A linear collection where each element (node) contains a reference to the next element. In a double-linked list, each element also holds a reference to the previous element.
 Best when frequent insertions and deletions at the beginning or end are required.
 ```java
 List<String> linkedList = new LinkedList<>();  // Empty LinkedList of strings
@@ -53,7 +53,7 @@ Best when you need to store unique elements that should be kept sorted and requi
 Set<Integer> treeSet = new TreeSet<>();  // Empty TreeSet of integers (sorted by natural order)
 ```
 
-## Comparing different data-structures and their operations
+## Comparing different data structures and their operations
 
 
 | Data Structure      | Access | Search | Insertion | Deletion |

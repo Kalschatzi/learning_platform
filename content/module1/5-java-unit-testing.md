@@ -4,15 +4,15 @@ type = ""
 weight = 5
 +++
 
-No application can be complete without `testing`.
+ **Testing** is an essential part of software development.
 
-There are different kinds of tests, but for now, we'll focus on `unit testing`.
+There are different kinds of tests, but for now we'll focus on **unit testing**.
 
 Unit testing is a software testing method where individual components (units) of a program are tested in isolation to ensure they work as expected. It helps detect bugs early, improves code quality, and simplifies debugging.
 
 In Java we mainly use [JUnit](https://junit.org/junit5/).
 
-In this example, we'll take our `Animal` class and test its methods.
+In this example, we take our `Animal` class and test its methods.
 
 ```java
 public class Animal {
@@ -38,7 +38,7 @@ public class Animal {
 }
 ```
 
-Now we can write a test 
+Now we can write a test:
 
 ```java
 import static org.junit.jupiter.api.Assertions.*;
@@ -66,23 +66,23 @@ class AnimalTest {
 }
 ```
 
-Unit tests will be defined in the `test` section of the code, and typically follow the same package structure as the class they are testing.
+Unit tests are defined in the `test` section of the code, and typically follow the same package structure as the class they are testing.
 
 The basic testing keyword is `assert`. This expects just a boolean function like `assert animal.getName().equals("Schatzi")`.
-However, it's easier and nicer to use these functions as they have much more descriptive errors. Typically you'll have helper functions like
+However, it's easier and nicer to use these functions as they have much more descriptive errors. Typically you'll have helper functions like:
 
 - `assertEquals(expectedResult, actualResult)` - asserts the values are equal
 - `assertNotEquals(expectedResult, actualResult)` - asserts the values aren't equal
 - `assertThrows(class, executable)` - asserts the received executable throws the expected exception
 - `assertTrue(actualResult)` - asserts the value is true
-- `assertFalse(actualResult)` - asserts the value is true
+- `assertFalse(actualResult)` - asserts the value is false
 
 etc...
-There's a variety of different assertions, feel free to browse the one that fits best your use case. 
+There's a variety of different assertions, feel free to browse and choose the one that fits best your use case. 
 
 This means that if we have our `Dog.java` file in `src/main/java/com/kalschatzi/Dog.java`, you'll have a test in `src/test/java/com/kalschatzi/DogTest.java`
 
-Note that you *cannot* test private method. By definition, those methods can only be called by the same class, and even in this test class you can't call them. So you need to understand the code or restructure in a way so that it's interface is properly testable and there is no unreachable code
+Note that you *cannot* test private method. By definition, those methods can only be called by the same class, and even in this test class you can't call them. So you need to understand the code and restructure it in a way that it's interface is properly testable and there is no unreachable code.
 
 
 ## Code Test Coverage
@@ -99,7 +99,7 @@ Code Test Coverage is a metric that measures how much of your code is executed d
 
 ## Mocking
 
-Mocking is a technique in unit testing where you replace real objects with fake (mock) objects to simulate behavior without executing real dependencies like databases, APIs, or file systems. This makes testing faster, isolated, and reliable.
+Mocking is a technique in unit testing where you replace real objects with fake (mock) objects to simulate behavior without executing real dependencies like databases, APIs, or file systems. This makes testing faster, more isolated, and more reliable.
 
 
 ### Why Use Mocking?
@@ -182,7 +182,7 @@ Key Mockito Features:
 * doThrow(new Exception()).when(mock).method() → Simulates exceptions.
 * spy(Object) → Partially mocks an object (calls real methods unless stubbed).
 
-With these methods you can test your application in multiple scenarios that are hard to replicate, like when a specific call throws an unexpected exception.
+With these methods you can test your application in scenarios that are hard to replicate, like when a specific call throws an unexpected exception.
 
 ## Test Driven Development (TDD)
 
@@ -196,7 +196,7 @@ TDD Process (Red-Green-Refactor)
 
 This cycle ensures that every feature is tested before implementation, reducing bugs and improving design.
 
-When you ask people what TDD is, most just say it's "writing the tests before the code" but that's not a real reason. The main reason is to let test define the interface of the class, so you don't write bad functions that don't make sense just because they might be easy to implement.
+When you ask people what TDD is, most just say it's "writing the tests before the code" but that's not the main reason. The main reason is to let test define the interface of the class, to avoid poorly written functions just because they might be easy to implement.
 
 
 

@@ -41,7 +41,7 @@ interface Animal {
 }
 ```
 
-After we can create our class that implements this contract.
+Next, we can create a class that implements this contract.
 
 ```java
 class Dog implements Animal {
@@ -81,7 +81,7 @@ public class Main {
 
 ## Abstract classes
 
-An abstract class in Java is a partially implemented class that cannot be instantiated - this is the main keyword that is asked a lot on interviews.
+An abstract class in Java is a partially implemented class that cannot be instantiated - this is something commonly asked about in interviews.
 
 It serves as a base class for other classes, allowing common behavior to be shared while enforcing method implementation in subclasses.
 
