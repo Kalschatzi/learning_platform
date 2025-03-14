@@ -1,2 +1,3 @@
 [params]
   themeVariant = "blue"
+enableRobotsTXT = true
