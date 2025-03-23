@@ -54,7 +54,9 @@ so that you get familiar with the tool.
 We will cover what `docker` is, and it's basic image in the [Containerization with docker](4-containerization-with-docker.md)
 but for now, make sure that you have `docker` installed on your machine: [Docker installation guide](https://docs.docker.com/engine/install/).
 
-## Docker-compose
+## Docker compose
 
-We will cover the `docker-compose` basic usage when we cover [Running Containers with docker-compose](5-running-containers-docker-compose.md) but for now,
-make sure you have `docker-compose` installed on your machine: [Docker-compose installation guide](https://docs.docker.com/compose/install/).
+We will cover the `docker compose` basic usage when we cover [Running Containers with docker compose](5-running-containers-docker-compose.md).
+The latest versions of `docker CLI` includes the installation of `docker compose` so if you installed `docker` as explained above, you should have it already. 
+To check the installation, run `docker compose version` on your machine.
+
