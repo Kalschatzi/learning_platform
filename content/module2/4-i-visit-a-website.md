@@ -58,3 +58,31 @@ It then continuously updates and reflows the page as JavaScript modifies the DOM
 ### 11 - Connection Closure
 
 Once the page is fully loaded, the browser closes the TCP connection.
+
+
+## Sequence Diagram
+
+{{< mermaid align="left" theme="neutral" >}}
+sequenceDiagram
+    actor User
+    participant Browser
+    participant DNS
+    participant WebServer
+    participant Database
+
+    User ->> Browser: Enter URL
+    Browser ->> DNS: Resolve domain
+    DNS ->> Browser: Return IP address
+    Browser ->> WebServer: Send HTTP request
+    WebServer ->> Database: Query data (if needed)
+    Database ->> WebServer: Return data
+    WebServer ->> Browser: Return HTML response
+    Browser ->> Browser: Parse HTML
+    Browser ->> WebServer: Request CSS file
+    WebServer ->> Browser: Return CSS
+    Browser ->> WebServer: Request JavaScript file
+    WebServer ->> Browser: Return JavaScript
+    Browser ->> WebServer: Request Image files
+    WebServer ->> Browser: Return Image files
+    Browser ->> User: Display page
+{{< /mermaid >}}
