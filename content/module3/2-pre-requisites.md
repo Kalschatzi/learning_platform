@@ -21,8 +21,10 @@ The JDK provides tools and libraries needed to develop, compile and run Java app
 
 #### How to install
 
-Majority of the systems already come with a `JDK` installed. In order to check out the version you have installed, 
+Majority of the systems already come with a `JDK` installed. In order to check out the default version you have installed, 
 open a terminal on your machine where you can use bash, and run `java --version`.
+
+We recommend that you install the latest `LTS` (Long Term Support) version.
 
 In order to find instructions on how to install a version of `JDK`, you can have a look at the official documentation
 for [JDK installation](https://docs.oracle.com/en/java/javase/22/install/overview-jdk-installation.html).
