@@ -14,7 +14,7 @@ weight = 3
 
  DNS Lookup: The browser first checks if the domain (e.g., learn.kalschatzi.com) is already cached from previous visits. If not, it queries a DNS server to resolve the domain name into an IP address (e.g., 192.0.2.1).
  * DNS Server Query: If the browser doesn’t have the IP cached, it asks DNS servers to find the IP address for the domain.
- * Recursive Lookup: If the DNS server doesn’t have the information, it will query other DNS servers in a hierarchical process until it gets the correct IP address.
+ * Recursive Lookup: If the DNS server doesn’t have the IP address, it will query other DNS servers in a hierarchical order until it finds the correct IP address.
 
  ### 3 - Establishing a Connection (TCP/IP)
 
@@ -22,14 +22,14 @@ weight = 3
 
  ### 4 - TLS/SSL Handshake (if HTTPS)
 
- iff the URL starts with https:// (secure), the browser initiates a TLS/SSL handshake to encrypt the connection.
+If the URL starts with `https://` (secure), the browser initiates a TLS/SSL handshake to encrypt the connection.
 * The server sends its SSL/TLS certificate to the browser to verify its identity (using a trusted certificate authority).
 * The browser and server agree on an encryption method and establish a secure connection to prevent eavesdropping and tampering.
 
 ### 5 - HTTP Request
 HTTP Request: The browser sends an HTTP request to the web server, asking for the resource (the webpage). 
 The request contains the URL, HTTP method (GET), headers (e.g., user-agent, cookies), and other relevant data.
-**On a browser, the verb is always GET**
+**When you enter a URL in the browser's address bar, the browser always sends a GET request**
 
 ### 6 - Web Server Processes Request
 

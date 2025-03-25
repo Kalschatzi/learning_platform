@@ -6,7 +6,7 @@ weight = 1
  
 The OSI (Open Systems Interconnection) model is a conceptual framework used to understand how different networking protocols interact in a layered architecture. It standardizes network communication into seven layers, each responsible for a specific function. This model helps different systems communicate, ensuring interoperability between devices and software from different vendors.
 
-## There are Seven layers in the OSI model
+## There are seven layers in the OSI model
 
 ### 1 - Physical Layer
 
@@ -38,7 +38,7 @@ Examples: IP (Internet Protocol), ICMP (ping), Routers.
   * UDP (User Datagram Protocol)
 
 Examples: TCP, UDP, ports (80 for HTTP, 443 for HTTPS).
- **NOTE** - You'll often read about TCP/IP referenced as a single protocol, because they are very coupled together on network routing, but it's actually 2 different layers, 3 and 4.
+ **NOTE** - You'll often read about TCP/IP referenced as a single protocol, because they are very coupled together on network routing, but it's actually 2 different layers: IP operates at Layer 3 (Network) and TCP functions at Layer 4 (Transport)."
 
 ### 5 - Session Layer
 
@@ -62,4 +62,4 @@ Examples: SSL/TLS (encryption), JPEG, ASCII, MP3.
 Examples: HTTP, HTTPS, FTP, SMTP, DNS.
 
 
-For application development, you'll mostly deal with TCP/IP - layers 3 and for - and HTTP - layers 7.
+For application development, you'll mostly deal with TCP/IP - Layers 3 and 4, and HTTP - Layer 7.

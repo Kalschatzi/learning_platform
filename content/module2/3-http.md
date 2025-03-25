@@ -25,9 +25,9 @@ GET /index.html HTTP/1.1
 
 * Method – Specifies the action (GET, POST, PUT, DELETE, etc.) - each one has a function according to the protocol and it's up to you to implement it properly.
 * Resource Path – The requested file or endpoint (/index.html).
-* Protocol Version – Defines the HTTP version (HTTP/1.1 or HTTP/2) - most websites will use HTTP/1.1
+* Protocol Version – Defines the HTTP version (HTTP/1.1 or HTTP/2) - most websites still use HTTP/1.1.
 
-This include both [query parameters and path variables.](https://medium.com/@averydcs/understanding-path-variables-and-query-parameters-in-http-requests-232248b71a8)
+This includes both [query parameters and path variables.](https://medium.com/@averydcs/understanding-path-variables-and-query-parameters-in-http-requests-232248b71a8)
 
 Meaning it can end up looking like this:
 ```
@@ -50,7 +50,8 @@ These are standard agreed headers that HTTP can send, but are not mandatory. Thi
 
 To understand headers in detail, visit [this link](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers). This `Mozilla` website is a great reference for HTTP standards and deep diving into the protocol.
 
-Because HTTP is based on TCP, TCP headrs will also be sent but are not to be confused with HTTP Headers, these aren't present in TCP.
+Because HTTP is based on TCP, TCP headers are also sent, but they should not to be confused with HTTP Headers which aren't present in TCP.
+
 Which is why you can only route with IP using a TCP Load Balancer and can't route based on hostname, because Host is an HTTP header.
 
 ## Body - Optional
@@ -85,7 +86,7 @@ Content-Type: text/html
 Content-Length: 3456  
 ```
 
-These headers need to be present if there is a body, they will say the `type` of its content as well as it's length in `bytes`.
+These headers need to be present if there is a body, they specify the `type` of its content as well as its length in `bytes`.
 
 ### Body - Optional
 
@@ -101,7 +102,7 @@ Contains the requested content (HTML, JSON, an image, etc.).
 
 ## HTTP Verbs/Actions
 
-When you make an HTTP request you need to specify the verb. These are the ones available:
+When you make an HTTP request you need to specify the action (verb). These are the ones available:
 
 * GET – Retrieves data (read-only).
 * POST – Sends data to create a resource (e.g., form submission).
@@ -138,7 +139,7 @@ A brief overview of is that HTTPS adds `S`ecurity to the protocol by encrypting 
 
 ## Interview questions
 * **What's the difference between a GET and a POST?**
-A GET just retrieves data and can't have write operation on the server, the request cannot have a body, while the POST is used to create resources.
-* **What's the different between a PUT and a POST?**
-PUT is idempotent - it either updates or creates the record meaning you can repeate the same request and get the same response. The POST is used to create a resource. If you do the same POST request twice, the 2nd one should fail because it clashes with the first one.
-* **What's the difference between 400's and 500's error codes?** 400's are typically user error, while 500's are errors in the server. For example 404 - Not found. User input the wrong URL that doesn't exist. 503 Unavailable - something is wrong on the server side that cannot be reached.
+A GET only retrieves data and the request cannot contain a body. The server that receives this request cannot execute write operations as a result of it. In contrast, the POST is used to create resources and can contain a body.
+* **What's the difference between a PUT and a POST?**
+PUT is idempotent - it either updates or creates the record, meaning the same request will generate the same response. The POST is used to create a resource. If you send the same POST request twice, the second one should fail because it clashes with the first one.
+* **What's the difference between 4XX and 5XX error codes?** 4XX are typically client-side errors, while 5XX are server-side errors. For example, `404 Not found` - the user requested a nonexistent URL. `503 Unavailable` - something is wrong on the server side that makes it unreachable.
