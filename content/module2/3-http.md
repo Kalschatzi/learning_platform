@@ -9,10 +9,10 @@ weight = 3
 
 ## Workflow
 
-* Client Request: A web browser or app sends an HTTP request to a web server.
-* Server Processing: The server processes the request, retrieves the requested resource, and generates a response.
-* Server Response: The server sends an HTTP response, which includes the requested data and metadata (headers, status codes).
-* Rendering: The client processes the response (e.g., a web browser renders an HTML page).
+* **Client Request**: A web browser or app sends an HTTP request to a web server.
+* **Server Processing**: The server processes the request, retrieves the requested resource, and generates a response.
+* **Server Response**: The server sends an HTTP response, which includes the requested data and metadata (headers, status codes).
+* **Rendering**: The client processes the response (e.g., a web browser renders an HTML page).
 
 ## HTTP Request Structure
 
@@ -32,7 +32,7 @@ This includes both [query parameters and path variables.](https://medium.com/@av
 Meaning it can end up looking like this:
 ```
 GET /products?category=electronics&sort=price&limit=10 HTTP/1.1
-````
+```
 
 ### Headers
 
@@ -44,9 +44,9 @@ User-Agent: Mozilla/5.0
 Accept: text/html  
 ```
 These are standard agreed headers that HTTP can send, but are not mandatory. This is what they mean:
-* Host – Specifies the target server.  - We'll need to study DNS in order to understand this a bit better.
-* User-Agent – Identifies the client (browser, bot, etc.).
-* Accept – Indicates the content type the client can handle. - on browser you typicaly accept `html`, but WebServices communication typically happens in `json`.
+* **Host** – Specifies the target server.  - We'll need to study DNS in order to understand this a bit better.
+* **User-Agent** – Identifies the client (browser, bot, etc.).
+* **Accept** – Indicates the content type the client can handle. - on browser you typicaly accept `html`, but WebServices communication typically happens in `json`.
 
 To understand headers in detail, visit [this link](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers). This `Mozilla` website is a great reference for HTTP standards and deep diving into the protocol.
 
@@ -63,7 +63,7 @@ Not all HTTP request have body. In fact, depending on the method, some **cannot*
   "username": "john_doe",
   "password": "securepassword"
 }
-````
+```
 This will contain data sent to the server (e.g., form submissions, JSON payloads).
 
 ## HTTP Response Structure
@@ -75,9 +75,9 @@ A server’s HTTP response consists of:
 ```
 HTTP/1.1 200 OK
 ```
-* Protocol Version – HTTP/1.1 or HTTP/2.*
-* Status Code – Indicates success (2XX), error (4XX, 5XX), or redirection (3XX).
-* Status Message – Human-readable response (e.g., OK, Not Found).
+* **Protocol Version** – HTTP/1.1 or HTTP/2.*
+* **Status Code** – Indicates success (2XX), error (4XX, 5XX), or redirection (3XX).
+* **Status Message** – Human-readable response (e.g., OK, Not Found).
 
 ### Headers
 
