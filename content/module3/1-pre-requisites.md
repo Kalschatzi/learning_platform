@@ -1,7 +1,7 @@
 +++
 title = "Pre-requisites for this module"
 type = ""
-weight = 2
+weight = 1
 +++
 
 ## Introduction
@@ -41,7 +41,7 @@ Then you should be prompted with a window that looks like this:
 ## Build Tools
 
 In this module, we will build and package java applications using [Gradle](https://docs.gradle.org/current/userguide/getting_started_eng.html).
-We will cover the basic knowledge that you need on `gradle` later on in the module, when we tackle [Packaging Java Applications](3-package-java-app.md).
+We will cover the basic knowledge that you need on `gradle` later on in the module, when we tackle [Packaging Java Applications](2-package-java-app).
 
 In order to check if you have `gradle` installed type `gradle --version` in bash.
 
@@ -53,14 +53,14 @@ so that you get familiar with the tool.
 
 ## Docker
 
-We will cover what `docker` is, and it's basic image in the [Containerization with docker](4-containerization-with-docker.md)
+We will cover what `docker` is, and it's basic image in the [Containerization with docker](3-containerization-with-docker)
 but for now, make sure that you have `docker` installed on your machine: [Docker installation guide](https://docs.docker.com/engine/install/).
 
 To verify what version of `docker` you have installed, use the `docker CLI` by typing in your bash terminal `docker version`.
 
 ## Docker compose
 
-We will cover the `docker compose` basic usage when we cover [Running Containers with docker compose](5-running-containers-docker-compose.md).
+We will cover the `docker compose` basic usage when we cover [Running Containers with docker compose](4-running-containers-docker-compose).
 The latest versions of `docker CLI` includes the installation of `docker compose` so if you installed `docker` as explained above, you should have it already. 
 To check the installation, run `docker compose version` on your machine.
 

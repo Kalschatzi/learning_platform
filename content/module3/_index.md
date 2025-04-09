@@ -11,8 +11,7 @@ It also introduces the concept of containerization using `docker`.
 
 ### What we'll cover:
 
-* [Introduction to bash](1-introduction-to-bash.md)
-* [Pre-requisites](2-pre-requisites)
-* [Packaging Java Applications](3-package-java-app)
-* [Containerization with Docker](4-containerization-with-docker)
-* [Running Containers with Docker Compose](5-running-containers-docker-compose)
+* [Pre-requisites](1-pre-requisites)
+* [Packaging Java Applications](2-package-java-app)
+* [Containerization with Docker](3-containerization-with-docker)
+* [Running Containers with Docker Compose](4-running-containers-docker-compose)

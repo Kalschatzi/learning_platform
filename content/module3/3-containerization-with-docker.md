@@ -79,4 +79,4 @@ To see what containers are running do:
 
 `docker ps`
 
-There is an easier way to run containers, by using `docker compose` which we will cover in the [Running Containers with Docker Compose](5-running-containers-docker-compose) section.
+There is an easier way to run containers, by using `docker compose` which we will cover in the [Running Containers with Docker Compose](4-running-containers-docker-compose) section.
