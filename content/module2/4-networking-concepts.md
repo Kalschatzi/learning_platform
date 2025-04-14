@@ -21,7 +21,7 @@ This means there are 2³² = 4,294,967,296(~4.3 billion) possible unique IPv4 ad
 
 Considering there are 8 billion people on earth, this number feels short. Which is why there is an IPv4 exhaustion.
 
-### IPv$ Exhaustion
+### IPv4 Exhaustion
 
 It means we’re running out of IPv4 addresses because:
 * Too many devices need IPs (phones, computers, smart devices, etc.)
@@ -59,14 +59,14 @@ Your router also have the responsibility of assigning IP addressed to the device
 It will also provide a **DNS* for internet resolutions and as a cache, so not all DNS request need to go to a DNS server.
 
 ## DNS (Domain Name System) servers 
-DNS Servers  translate domain names (like `kalschatzi.com`) into IP addresses (like 172.67.199.164), so computers can locate each other on the internet. 
+DNS Servers  translate domain names (like `kalschatzi.com`) into IP addresses (like `172.67.199.164`), so computers can locate each other on the internet. 
 
 ### Why DNS is Needed
 
 This builds a bridge between humans and machines. Humans remember names, machines care about actual address like IPs. This will be even more true once the whole world adopts IPv6.
 
 ### How it works
-Let's take our previous exercise where we try to resolve `learn.kalschatzi.com`. What are the steps taken to resolve it?
+Let's say we try to resolve `learn.kalschatzi.com`. What are the steps taken to do it?
 * Browser checks cache – Is the IP already known?
 * If not, it asks the local DNS server (usually from your ISP or router).
 * If that server doesn’t know, it queries:
@@ -85,7 +85,27 @@ Once we resolve a DNS, it can be of different types. Like:
 |AAAA|Maps domain → IPv6 address|kalschatzi.com ->2001:0db8:85a3:0000:0000:8a2e:0370:7334|
 |CNAME|Alias (maps name → another name|learn.kalschatzi.com -> kalschatzi.com which then would map to 172.67.199.164|
 |MX|Mail server for the domain|mail.kalschatzi.com ->172.67.199.164|
-|MX|Domain Name server |ns1.example.com -> this can be use for DNS delegation|
-|TXT|Misc data (SPF, DKIM, etc.)|Used for email/security|
+|NS|Domain Name server |ns1.kalschatzi.com -> this can be use for DNS delegation|
+|TXT|Misc data (SPF, DKIM, etc.)|Used for email/security or just information|
+
+## Let's resolve an IP!
+```bash
+nslookup kalschatzi.com
+```
+If I execute this, the output will looks something like:
+```bash
+Server:		192.168.2.1
+Address:	192.168.2.1#53
+
+Non-authoritative answer:
+Name:	learn.kalschatzi.com
+Address: 104.21.21.170
+Name:	learn.kalschatzi.com
+Address: 172.67.199.164
+```
 
 
+What does it mean?
+* First 2 lines are what was the DNS. **192.168.2.1** is the router's IP address, and 53 is the default DNS Server port.
+* We have then the line **Non-authoritative answer:**. This means the IP was cached, either at your router's internal DNS server, or at what DNS Server it called (the ISP by default, or something else in case you chaged it). If it were not, the response would have **Authoritative answer**, meaning it went straight to the DNS Server that owns the domain. This might be rare because everything is cached by to make queries faster.
+* It then provides 2 distinct addresses that the client can pick to call. This often means that the server is behind a [CDN](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/) like cloudflare.

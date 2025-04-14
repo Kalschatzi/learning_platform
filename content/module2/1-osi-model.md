@@ -18,8 +18,8 @@ The OSI (Open Systems Interconnection) model is a conceptual framework used to u
 
 * Ensures error-free transmission of data between two directly connected nodes.
 * Divided into two sublayers:
-* MAC (Media Access Control) – Controls access to the physical medium.
-* LLC (Logical Link Control) – Manages frame synchronization and error checking.
+  * MAC (Media Access Control) – Controls access to the physical medium.
+  * LLC (Logical Link Control) – Manages frame synchronization and error checking.
 
 Examples: Ethernet, Wi-Fi, MAC addresses.
 

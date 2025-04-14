@@ -52,8 +52,6 @@ To understand headers in detail, visit [this link](https://developer.mozilla.org
 
 Because HTTP is based on TCP, TCP headers are also sent, but they should not to be confused with HTTP Headers which aren't present in TCP.
 
-Which is why you can only route with IP using a TCP Load Balancer and can't route based on hostname, because Host is an HTTP header.
-
 ## Body - Optional
 
 Not all HTTP request have body. In fact, depending on the method, some **cannot** have a body.
@@ -119,6 +117,8 @@ When you make an HTTP request you need to specify the action (verb). These are t
 * 4xx (Client Errors): Bad requests, e.g., 400 Bad Request, 404 Not Found.
 * 5xx (Server Errors): Server issues, e.g., 500 Internal Server Error, 503 Service Unavailable.
 
+Take look a the entire [list of error codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+Check out what #418 for a fun curiosity!
 
 ## HTTP Versions
 * HTTP/1.0 – First widely used version, lacks persistent connections.

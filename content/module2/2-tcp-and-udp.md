@@ -5,6 +5,7 @@ weight = 2
 +++
  
 There are two main protocols the internet is based on, TCP (Transmission Control Protocol) and UDP (User Datagram Protocol)
+These are both layer 4 protocols.
 
 ## TCP - Transmission Control Protocol
 

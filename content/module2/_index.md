@@ -14,4 +14,5 @@ This model will cover computer networks, how they are structured, their protocol
 * [OSI Model](1-osi-model)
 * [TCP and UDP](2-tcp-and-udp)
 * [HyperText Transfer Protocol](3-http)
-* [What happens when I enter a URL on a browser?](4-i-visit-a-website)
+* [Networking Concepts](4-networking-concepts)
+* [What happens when I enter a URL on a browser?](5-i-visit-a-website)

@@ -1,7 +1,7 @@
 +++
 title = "What happens when I enter a URL on a browser?"
 type = ""
-weight = 3
+weight = 5
 +++
  
  When you input a URL (Uniform Resource Locator) into a browser, a series of processes occur to retrieve the requested resource (like a webpage). Here are all the steps:
