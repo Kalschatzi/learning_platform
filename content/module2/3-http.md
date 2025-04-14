@@ -1,5 +1,5 @@
 +++
-title = "HyperText Transfer Protocol"
+title = "HTTP - HyperText Transfer Protocol"
 type = ""
 weight = 3
 +++
