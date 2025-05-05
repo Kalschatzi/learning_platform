@@ -56,8 +56,8 @@ classDef proxy fill:#ffeeba,stroke:#000,stroke-width:1px
 
 ## Load Balancers
 
-Load balancers are similar to reverse proxies with a bigger focus on traffic shapping. Their main goal is ensure high availability and load distribution.
-It can handle things like if your application has multiple replicas/servers it will distribute the load across all of them, and if one of them is down or unresponsive, it will stop sending request to that one and only use the other ones.
+Load balancers are similar to reverse proxies with a bigger focus on traffic shaping. Their main goal is ensure high availability and load distribution.
+It can handle things like if your application has multiple replicas/servers it will distribute the load across all of them, and if one of them is down or unresponsive, it will stop sending requests to that one and only use the other ones.
 
 Some reverse proxies can also work as load balancers, like [NGINX](https://nginx.org/en/) (reads engine X).
 
@@ -86,13 +86,12 @@ This has the benefit of being able to do what layer 4 LB can do, modify requests
 The downside is that it's heavier and slower that a TCP/UDP LB.
 
 ### Global Load Balancer (DNS/Geo-Based)
-Routes users to the closest datacenter
-Based on:
+Routes users to the closest datacenter based on:
 * Geography (GeoDNS)
 * Latency
 * Health of regions
 
-This is great for global performance as you can distribute your workload across the globe to whether it's fastest for the specific user. Which is why when you go to something like `netflix.com` even though it's the same URL, you'll be hitting different servers depending on where the request is coming from. This then will also allow for **failover** scenarios.
+This is great for global performance as you can distribute your workload across the globe to where it's fastest for the specific user. Which is why when you go to something like `netflix.com` even though it's the same URL, you'll be hitting different servers depending on where the request is coming from. This then will also allow for **failover** scenarios.
 
 
 ### Hardware Load Balancer (Physical devices)
@@ -105,8 +104,8 @@ It seems great in paper but it's very expensive, and being a physical device, it
 
 
 ### There are the different ways to distribute load
-* Round Robin -> distribute evenly, not caring how busy each is
-* Least Connections -> Send to the server with the fewest open connections"
-* IP Hash -> Stick a client to a specific server. Used for sticky session scenarios in an alternative to cookies
+* Round Robin -> distribute evenly, not caring how busy each server is
+* Least Connections -> Send to the server with the fewest open connections
+* IP Hash -> Stick a client to a specific server. Used for sticky session scenarios as an alternative to cookies
 * Weighted Round Robin -> Take turns, but favor stronger servers. If **A** has weight of 4 and **B** has 1, it will send 4 times as many requests to **A** than **B**.
 * Health-based routing -> Only send to healthy servers. This is combined with other algorithms. It will send every few seconds a ping HTTP request to each server and if they fail, it will stop routing request to that server, allowing it to process already accepted requests without overloading it more.

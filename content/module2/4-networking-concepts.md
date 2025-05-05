@@ -44,17 +44,19 @@ Your own home has a single public IP that is accessible to the internet, but the
 This replaces IPv4 with a much larger address space.
 The format is 128 bits → 2¹²⁸ = **340 undecillion addresses** (That’s 340 trillion trillion trillion)
 
-**Example IPv6:**  2001:0db8:85a3:0000:0000:8a2e:0370:7334
+**Example IPv6:**  `2001:0db8:85a3:0000:0000:8a2e:0370:7334`
+
 There are multiple benefits from using this, but the main driver as why it's not the standard yet it's because no all devices yet support this.
 
 
 ## What is a LAN (Local Area Network)
+
 A LAN connects devices within a small area, like your home. You'll have a LAN that will connect to the WAN (World Area Network) via the router.
 This will be a private network, only accessible on the devices of that same network. It will use private IP, so no need to worry about IPv4 exhaustion. Yes, each device will still have an IP which will be handled by router.
 
 ### What services are in a LAN
 You router will be the entry and exit point of your network to the internet. All traffic initiating from your devices will be allowed, but traffic coming in will be denied by the **router's firewall**
-Your router also have the responsibility of assigning IP addressed to the devices connected to it. This is done with a **DHCP** server inside the router.
+Your router also has the responsibility of assigning IP addressed to the devices connected to it. This is done with a **DHCP** server inside the router.
 
 It will also provide a **DNS* for internet resolutions and as a cache, so not all DNS request need to go to a DNS server.
 
@@ -65,7 +67,7 @@ DNS Servers  translate domain names (like `kalschatzi.com`) into IP addresses (l
 
 This builds a bridge between humans and machines. Humans remember names, machines care about actual address like IPs. This will be even more true once the whole world adopts IPv6.
 
-### How it works
+### How DNS works
 Let's say we try to resolve `learn.kalschatzi.com`. What are the steps taken to do it?
 * Browser checks cache – Is the IP already known?
 * If not, it asks the local DNS server (usually from your ISP or router).

@@ -16,3 +16,4 @@ This model will cover computer networks, how they are structured, their protocol
 * [HyperText Transfer Protocol](3-http)
 * [Networking Concepts](4-networking-concepts)
 * [What happens when I enter a URL on a browser?](5-i-visit-a-website)
+* [Traffic Routing](6-traffic-routing)
