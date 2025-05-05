@@ -1,7 +1,7 @@
 +++
 title = "HashMap Deep Dive"
 type = ""
-weight = 3
+weight = 9
 +++
  
  A HashMap is an implementation of the Map interface in Java that stores key-value pairs. It provides efficient O(1) average-time complexity for operations like insert, delete, and search. However, its performance can degrade under certain circumstances, leading to the worst-case time complexity of O(n).
@@ -30,6 +30,6 @@ As elements are added, the HashMap’s internal array may need to grow. Typicall
 In the average case, if the hash function distributes keys evenly across the buckets, each bucket will hold only a few entries. Therefore, search, insert, and delete operations will take O(1) time, making HashMap very efficient.
 The worst-case time complexity for a search in a HashMap is O(n), which occurs when many keys hash to the same bucket (i.e., collisions). In this case, all the key-value pairs in that bucket will be stored in a linked list (or other data structure). If all keys hash to the same bucket, the entire HashMap becomes a linked list, and the search operation would need to traverse all elements in the list, resulting in O(n) time complexity.
 
-{{< figure src="/images/module2/hashmap.png" >}}
+{{< figure src="/images/module1/hashmap.png" >}}
 
 This is a classic image of a HashMap and you'll see this in some technical interviews, where you'll be shown a similar image and asked to explain what it means.

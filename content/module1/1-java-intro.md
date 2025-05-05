@@ -23,12 +23,12 @@ This will be the simplest Java application you can write. Here's how your folder
 
 {{< figure src="/images/module1/java-intro-file-structure.png" >}}
 
-Let's now deconstruct it line by line.
+Let's deconstruct it line by line.
 
 ```java
 package com.kalschatzi;
 ```
-This is where package is, which is what Java calls code folders. If you look at the file structure image, you'll see it matches what's there.
+This is where package is, which is what Java calls code folders. If you look at the file structure image, you'll see that it matches.
 
 Why does it matter? More details will come on this later, but it's a way to organize the code and ensure only certain other files have access to the correct code. There are plenty of approaches, and different developers might have different preferences, but you can study [Domain Driven Development - DDD](https://www.geeksforgeeks.org/domain-driven-design-ddd/) in case you're curious.
 
@@ -40,7 +40,7 @@ public class Main {
 
 Here we have the class definition. With the `public` we're starting to talk about [encapsulation](https://www.geeksforgeeks.org/encapsulation-in-java/). This defines from where this class is accessible. As a root class, you can only have `public` or `package-private` access. The key difference is that you will not be allowed to create a new instance of a package-private class outside of that package.
 
-You can also have a `private` class, but only as an inner class. Don't worry about any of these concepts for now, it can be something you look back.
+You can also have a `private` class, but only as an inner class. Don't worry about any of these concepts for now, it can be something you revisit later.
 
 ### What's a class?
 A class is a blueprint for creating objects. It contains fields (variables) and methods that define the behavior of the objects.

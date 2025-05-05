@@ -1,7 +1,7 @@
 +++
 title = "Complexity of Algorithms"
 type = ""
-weight = 1
+weight = 7
 +++
 
 There are 2 measurements to evaluate the complexity of an algorithm:
@@ -27,17 +27,3 @@ Consider whether the algorithm uses extra space (like auxiliary data structures 
 
 
 In the end, memory is much cheaper than CPU, so nowadays engineers mostly focus on time complexity.
-
-
-### Comparing different datastructures and their operations
-
-| Data Structure      | Access | Search | Insertion | Deletion |
-|---------------------|--------|--------|-----------|----------|
-| **Array**          | O(1)   | O(n)   | O(n)      | O(n)     |
-| **ArrayList**      | O(1)   | O(n)   | O(n)      | O(n)     |
-| **LinkedList**     | O(n)   | O(n)   | O(1)      | O(1)     |
-| **HashMap**        | O(1)   | O(1)   | O(1)      | O(1)     |
-| **TreeMap**        | O(log n) | O(log n) | O(log n) | O(log n) |
-| **HashSet**        | O(1)   | O(1)   | O(1)      | O(1)     |
-| **TreeSet**        | O(log n) | O(log n) | O(log n) | O(log n) |
-
