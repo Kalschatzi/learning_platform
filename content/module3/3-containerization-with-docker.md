@@ -49,34 +49,24 @@ A container image is a standardized package that includes all the files, binarie
 ## How to create a docker image
 
 A docker image needs a file to hold the configuration. This file is called the `Dockerfile`.
+Here is the [Dockerfile](https://github.com/Kalschatzi/reference-java-spring/blob/main/Dockerfile) for the reference application.
 
-Here is an example of `Dockerfile` that we can use to package our java reference application:
+In order to build an image and see what we have built, we need to start getting familiar with the `docker CLI`:
 
-TODO - add here the Dockerfile with comments on each layer
-
-In order to build an image and see what we have built, we need to start getting familiar with the `docker CLI`.
-To see everything that you can do with `docker` from your bash terminal, just type `docker`. This will give you a list of available commands. 
-
-To build an image simply do (assuming you are in the same directory as the `Dockerfile`):
-
-`docker build .`
-
-Note: `.` means you are building in the local directory. 
-
-To see the image you have built:
-
-`docker images`
+- To see everything that you can do with `docker` from your bash terminal, just type `docker`. This will give you a list of available commands. 
+- To build an image simply do (assuming you are in the same directory as the `Dockerfile`): `docker build .` Note: `.` means you are building in the local directory. 
+- To see the image you have built: `docker images`
 
 ## How to run a container
 
-To run the image you created above, take the hash displayed when you run `docker images` and do:
+- To run the image you created above, take the docker `IMAGE ID` displayed when you run `docker images` and do: `docker run <docker IMAGE ID>`. 
+- Now try and access the reference app status endpoint: http://localhost:8080/private/status. You will notice that you cannot connect to the server. 
+  That is because you haven't actually exposed a port on your localhost so that the docker container can be reached. 
+- To expose a port run `docker run -p 8080:8080 <docker IMAGE ID>`.
+- Now have a look at http://localhost:8080/private/status again. You should get an `OK` response.
+- Done, you now have a container running on your local machine!
+- To see what containers are running, run `docker ps`.
 
-`docker run <docker-image-hash>`. 
-
-Done, you now have a container running on your local machine!
-
-To see what containers are running do:
-
-`docker ps`
+For further explanation on exposing ports for docker containers, have a look at the official documentation [here](https://docs.docker.com/get-started/docker-concepts/running-containers/publishing-ports/#explanation).
 
 There is an easier way to run containers, by using `docker compose` which we will cover in the [Running Containers with Docker Compose](4-running-containers-docker-compose) section.

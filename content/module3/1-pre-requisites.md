@@ -51,6 +51,9 @@ IntelliJ supports full integration with Gradle, more instructions on this can be
 When you go through this module we recommend that you `gradle` both from command line and any IDE you might choose,
 so that you get familiar with the tool. 
 
+We recommend using the [Gradle Wrapper](https://docs.gradle.org/8.14/userguide/gradle_wrapper.html) in order to run gradle tasks.
+In order to see the gradle wrapper in action, have a look at the [reference app](https://github.com/Kalschatzi/reference-java-spring).
+
 ## Docker
 
 We will cover what `docker` is, and it's basic image in the [Containerization with docker](3-containerization-with-docker)

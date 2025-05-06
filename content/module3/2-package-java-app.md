@@ -24,10 +24,13 @@ that you can run.
 
 To see how to run a `JAR` file have a look at the next section. 
 
-But for now, let's build a `JAR` using `gradle`:
+But for now, let's build a `JAR` using `gradle`, for our [reference app](https://github.com/Kalschatzi/reference-java-spring):
 
-<TODO - add here link to the reference app with a basic build.gradle>
-<TODO - add instructions on how to package the reference app into a jar>
+- first inspect what `gradle` tasks you have available by running `./gradlew tasks`.
+- in the tasks list, have a look at the tasks available in the "Build tasks" section. You should have tasks like: `clean` and `build`.
+- run  `./gradlew :service:build` -> this should produce a directory called `build`
+- inspect the `build/lib` directory and you should find a jar file
+- in order to clean up the `build` directory, run `./gradlew :service:clean`
 
 ### How to run the JAR file
 
@@ -41,11 +44,10 @@ The `JDK` includes a `JRE` and additional tools that allow you to develop and de
 This means that when you develop on your machine you need the whole kit, you need the `JDK`, but in production or in any environment
 where you just need to run your software, is sufficient to have only the `JRE` available. 
 
-To run the reference application:
-<TODO - add instructions on how to run the reference app jar>
+To run the reference application: 
+- run the jar directly: `java -jar service/build/libs/service-0.0.1-SNAPSHOT.jar`
+- or use gradle: `./gradlew :service:bootRun`
 
-
-
-
+To check that the application is running, visit http://localhost:8080/private/status in your browser, and you should get a response with the content `OK`.
 
 
