@@ -1,7 +1,7 @@
 +++
 title = "Data Structures"
 type = ""
-weight = 2
+weight = 8
 +++
  
 ## Array

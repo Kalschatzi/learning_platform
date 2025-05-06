@@ -4,12 +4,16 @@ type = "chapter"
 weight = 2
 +++
 
-## Module Objectives
+## Computer Networks
 
-This module aims to cover algorithms and data structures. 
-We'll understand how to evaluate the complexities of an algorithms We'll look into specific data structures, their advantages, disadvantages, when you should use them and why.
+### Module Objectives
+
+This model will cover computer networks, how they are structured, their protocolos and some deep-dives into how the internet as a whole works.
 
 ### What we'll cover:
-* [Complexity of Algorithms](1-evaluate-algorithms)
-* [Data-structure](2-data-structures)
-* [HashMap deep dive](3-hash-map-deep-dive)
+* [OSI Model](1-osi-model)
+* [TCP and UDP](2-tcp-and-udp)
+* [HyperText Transfer Protocol](3-http)
+* [Networking Concepts](4-networking-concepts)
+* [What happens when I enter a URL on a browser?](5-i-visit-a-website)
+* [Traffic Routing](6-traffic-routing)
