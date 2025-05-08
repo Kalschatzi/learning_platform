@@ -8,4 +8,4 @@
 * Github actions for CI
 * Makefile
 * Docker
-* Docker-compose
+* Docker compose
