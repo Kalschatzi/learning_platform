@@ -20,6 +20,14 @@ There are at least two major advantages that docker gives you when it comes to s
 There are a lot more advantages that docker provides, like security testing and tooling to test and deploy, but we won't focus on those 
 as part of this module, as they will come up in more advanced modules and when we will focus on Software Delivery Lifecycle(SDLC). 
 
+## Docker versus Virtual Machines
+
+Virtual Machines(VMs) is another way to achieve both isolation and repeatability. 
+The main difference between Docker and VMs:
+
+- Docker containers have both the application code and its environment, including libraries, system tools, and runtime. Docker containers use the underlying host operating system kernel resources directly.
+- Virtual Machines have their own operating system, they are essentially copies of physical machines.
+
 ## Basic docker concepts
 
 ### Docker container
@@ -67,6 +75,15 @@ In order to build an image and see what we have built, we need to start getting 
 - Done, you now have a container running on your local machine!
 - To see what containers are running, run `docker ps`.
 
-For further explanation on exposing ports for docker containers, have a look at the official documentation [here](https://docs.docker.com/get-started/docker-concepts/running-containers/publishing-ports/#explanation).
+What happened in the steps above?
+
+First you identified an image that was created locally, in the local docker [registry](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-registry/). 
+
+Then you run it and noticed that you cannot yet access it. Why is that? 
+The purpose of containers is to run in isolation, including isolation from your local machine. So by default, you won't be able to access
+them directly on your localhost, without exposing the port. 
+
+For further explanation on exposing ports for docker containers, have a look at the official documentation 
+for [exposed ports](https://docs.docker.com/engine/containers/run/#exposed-ports) and [how to publish ports](https://docs.docker.com/get-started/docker-concepts/running-containers/publishing-ports/#explanation).
 
 There is an easier way to run containers, by using `docker compose` which we will cover in the [Running Containers with Docker Compose](4-running-containers-docker-compose) section.
